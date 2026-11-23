@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
+import 'lista_compras_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -50,9 +51,9 @@ class _LoginScreenState extends State<LoginScreen> {
     await Future<void>.delayed(const Duration(milliseconds: 1100));
     if (!mounted) return;
 
-    // Navigator.of(context).pushReplacement(
-    //   MaterialPageRoute<void>(builder: (_) => const ListaComprasScreen()),
-    // );
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute<void>(builder: (_) => const ListaComprasScreen()),
+    );
   }
 
   @override

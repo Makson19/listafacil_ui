@@ -14,6 +14,7 @@ class ListaFacilApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'ListaFácil',
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.light(),
       home: const LoginScreen(),
     );
