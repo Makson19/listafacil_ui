@@ -146,8 +146,9 @@ class _CadastroItemScreenState extends State<CadastroItemScreen> {
                     validator: (valor) {
                       final numero = int.tryParse(valor?.trim() ?? '');
                       if (numero == null) return 'Informe a quantidade';
-                      if (numero <= 0)
+                      if (numero <= 0) {
                         return 'A quantidade deve ser maior que zero';
+                      }
                       return null;
                     },
                   ),
@@ -208,7 +209,7 @@ class _CadastroItemScreenState extends State<CadastroItemScreen> {
 }
 
 class CabecalhoFormulario extends StatelessWidget {
-  const CabecalhoFormulario();
+  const CabecalhoFormulario({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -246,7 +247,7 @@ class CabecalhoFormulario extends StatelessWidget {
 
 
 class PreviewSubtotal extends StatelessWidget {
-  const PreviewSubtotal({required this.subtotal});
+  const PreviewSubtotal({super.key, required this.subtotal});
 
   final double subtotal;
 

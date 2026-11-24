@@ -4,7 +4,7 @@ import 'package:listafacil/utils/functions.dart';
 import '../theme/app_theme.dart';
 
 class BarraTotal extends StatelessWidget {
-  const BarraTotal({
+  const BarraTotal({super.key, 
     required this.total,
     required this.podeCalcular,
     required this.onCalcular,

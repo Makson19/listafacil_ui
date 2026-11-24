@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:listafacil/theme/app_theme.dart';
 
 class NoEmptyItems extends StatelessWidget {
-  const NoEmptyItems({required this.onAdd});
+  const NoEmptyItems({super.key, required this.onAdd});
 
   final VoidCallback onAdd;
 

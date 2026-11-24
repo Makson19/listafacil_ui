@@ -208,7 +208,7 @@ class _ListaCompraScreenState extends State<ListaComprasScreen> {
             ),
       bottomNavigationBar: BarraTotal(
         total: getTotal(itens),
-        podeCalcular: !itens.isEmpty,
+        podeCalcular: itens.isNotEmpty,
         onCalcular: () => mostrarResumoTotal(),
       ),
     );
@@ -216,7 +216,7 @@ class _ListaCompraScreenState extends State<ListaComprasScreen> {
 }
 
 class FundoDeslizar extends StatelessWidget {
-  const FundoDeslizar();
+  const FundoDeslizar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -237,7 +237,7 @@ class FundoDeslizar extends StatelessWidget {
 }
 
 class ResumoTotalSheet extends StatelessWidget {
-  const ResumoTotalSheet({required this.itens});
+  const ResumoTotalSheet({super.key, required this.itens});
 
   final List<ItemCompra> itens;
 
@@ -360,7 +360,7 @@ class ResumoTotalSheet extends StatelessWidget {
 }
 
 class LinhaResumo extends StatelessWidget {
-  const LinhaResumo({required this.rotulo, required this.valor});
+  const LinhaResumo({super.key, required this.rotulo, required this.valor});
 
   final String rotulo;
   final String valor;
