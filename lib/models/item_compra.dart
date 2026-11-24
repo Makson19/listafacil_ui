@@ -12,4 +12,19 @@ class ItemCompra {
     required this.precoUnitario,
     this.selecionado = false
   });
+
+  ItemCompra copyWith({
+    String? nome,
+    int? quantidade,
+    double? precoUnitario,
+    bool? selecionado,
+  }) {
+    return ItemCompra(
+      id: id,
+      nome: nome ?? this.nome,
+      quantidade: quantidade ?? this.quantidade,
+      precoUnitario: precoUnitario ?? this.precoUnitario,
+      selecionado: selecionado ?? this.selecionado,
+    );
+  }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:listafacil/models/item_compra.dart';
 import 'package:listafacil/theme/app_theme.dart';
-import 'package:listafacil/utils/formato.dart';
+import 'package:listafacil/utils/functions.dart';
 import 'package:listafacil/widgets/botao_acao.dart';
 
 class ItemCompraTile extends StatelessWidget {

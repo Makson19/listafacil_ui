@@ -32,6 +32,16 @@ double? converterPreco(String texto) {
 }
 
 double getTotal(List<ItemCompra> items) {
-  final double total = items.fold<double>(0.0, (acc, item) => acc + (item.precoUnitario * item.quantidade));
+  double total = items.fold<double>(0.0, (acc, item) => acc + (item.precoUnitario * item.quantidade));
+  return total;
+}
+
+double getTotalMarcado(List<ItemCompra> items) {
+  double total = items.fold<double>(0.0, (acc, item) => item.selecionado ? (acc + (item.precoUnitario * item.quantidade)) : acc + 0);
+  return total;
+}
+
+double getTotalNaoMarcado(List<ItemCompra> items) {
+  double total = items.fold<double>(0.0, (acc, item) => !item.selecionado ? (acc + (item.precoUnitario * item.quantidade)) : acc + 0);
   return total;
 }
